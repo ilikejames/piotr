@@ -19,7 +19,6 @@
 				}
 
 				html, body {
-					background: #bababa;
 					height:100%;
 					min-height: 100%;
 					font-size:17px;
@@ -27,27 +26,15 @@
 					margin:0;
 					padding:0;
 					font-family: Arial, sans-serif;
-					overflow: hidden;
 					transition: all 0.3s linear;
-				}
-
-				#piotr {
-					
-				}
-
-				.restrict {
-					/*max-width: 900px;*/
-					/*max-height: 600px;*/
-					word-spacing: never-break; /* ha */
 				}
 
 				.image {
 					position: fixed;
-					top: 1rem;
-					bottom: 1rem;
-					left: 1rem;
-					right: 1rem;
-					border:solid 2px black;
+					top: 0rem;
+					bottom: 0rem;
+					left: 0rem;
+					right: 0rem;
 					background: white;
 					overflow: hidden;
 				}
@@ -75,9 +62,10 @@
 					/*font-size:1.1rem;*/
 					z-index: 2;
 					/*top:6rem;*/
-					left:2.5rem;
-					right:2.5rem;
-					bottom:2rem;
+					left:1rem;
+					right:1rem;
+					top:33%;
+					overflow: auto;
 					white-space: pre-wrap;       /* css-3 */
 					white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
 					white-space: -pre-wrap;      /* Opera 4-6 */
@@ -99,6 +87,27 @@
 					color:black;
 				}
 
+				@media only screen and (max-width: 760px) and (orientation: landscape) {
+					.image img {
+						max-width: 300px;
+					}
+				}
+
+				@media all and (min-width: 760px) {
+
+					html { 
+						/*font-size:50px;*/
+					}
+
+					body {
+						/*font-size:5%;*/
+					}
+
+					.image img {
+						max-width:350px;
+					}
+				}
+				/*
 				@media all and (min-width: 760px) {
 
 					html { 
@@ -125,18 +134,8 @@
 						bottom:10vh;
 						
 					}
-					/*
-					.image img {
-						width:300px;
-					}
-
-					.text {
-						bottom:auto;
-						top: 5rem;
-						font-size:1rem;
-					}
-					*/
-				}
+				
+				}*/
 		</style>
 
 	</head>
