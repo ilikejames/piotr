@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+	<head>
+
+		<title>PIOTR NIEPSUJ</title>
+		<meta name="description" content="IMAGE BUSINESS, MILAN"/>
+
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<meta property="og:title" content="Title Here" />
+		<meta property="og:type" content="article" />
+		<meta property="og:url" content="http://www.example.com/" />
+		<meta property="og:image" content="http://example.com/image.jpg" />
+
+		<style type="text/css">
+			/* mobile first */
+				* {
+					box-sizing:border-box;
+				}
+
+				html, body {
+					background: #bababa;
+					height:100%;
+					min-height: 100%;
+					font-size:17px;
+					border:0;
+					margin:0;
+					padding:0;
+					font-family: Arial, sans-serif;
+					overflow: hidden;
+					transition: all 0.3s linear;
+				}
+
+				#piotr {
+					
+				}
+
+				.restrict {
+					/*max-width: 900px;*/
+					/*max-height: 600px;*/
+					word-spacing: never-break; /* ha */
+				}
+
+				.image {
+					position: fixed;
+					top: 1rem;
+					bottom: 1rem;
+					left: 1rem;
+					right: 1rem;
+					border:solid 2px black;
+					background: white;
+					overflow: hidden;
+				}
+
+				.debug .image {
+					background: rgba(255,0,0,0.1);
+				}	
+
+				.image img {
+					width:100%;
+					transition: all 0.3s linear;
+				}
+
+				.image .overlay {
+					position: absolute;
+					top:0;
+					left: 0;
+					right:0;
+					bottom: 0;
+					background: rgba(255,255,255,0.2);
+				}
+
+				.text {
+					position: absolute;
+					/*font-size:1.1rem;*/
+					z-index: 2;
+					/*top:6rem;*/
+					left:2.5rem;
+					right:2.5rem;
+					bottom:2rem;
+					white-space: pre-wrap;       /* css-3 */
+					white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+					white-space: -pre-wrap;      /* Opera 4-6 */
+					white-space: -o-pre-wrap;    /* Opera 7 */
+					word-wrap: break-word;       /* Internet Explorer 5.5+ */
+					line-height: 1.4rem;
+	    			font-weight: 600;
+	    			letter-spacing: 0.07rem;
+	    			font-size:1.1rem;
+	    			transition: all 0.3s linear;
+	    			/*font-size: 3vh;
+	    			line-height: 3.5vh;
+	    			left:6vh;
+					right:6vh;
+					bottom:8vh;*/
+				}
+
+				.text a {
+					color:black;
+				}
+
+				@media all and (min-width: 760px) {
+
+					html { 
+						font-size:50px;
+					}
+
+					body {
+						font-size:5%;
+					}
+
+					.image img {
+						max-width:350px;
+					}
+
+					.text {
+						top:50%;
+						transform:translateY(-50%);
+						bottom:0;
+
+						font-size: 5vh;
+		    			line-height: 5.5vh;
+		    			left:8vh;
+						right:8vh;
+						bottom:10vh;
+						
+					}
+					/*
+					.image img {
+						width:300px;
+					}
+
+					.text {
+						bottom:auto;
+						top: 5rem;
+						font-size:1rem;
+					}
+					*/
+				}
+		</style>
+
+	</head>
+	<body>
+
+				<div id="piotr">
+						<div class="image restrict">
+							<img src="https://scontent-lhr3-1.cdninstagram.com/t51.2885-15/e35/11849093_764018800397894_1845783201_n.jpg?ig_cache_key=MTExMzg4MTI5NDY5NTM2ODUyOA%3D%3D.2"/>
+							<div class="overlay"></div>
+						</div>
+
+
+						<div class="text restrict">
+PIOTR NIEPSUJ
+IMAGE BUSINESS, MILAN
+
+SOME OF MY PHOTOS ARE <a href="http://piotrniepsuj.tumblr.com">ON TUMBLR</a>, SOME MORE ARE <a href="https://www.instagram.com/piotrniepsuj/">ON INSTAGRAM</a>, AND THERE IS EVEN MORE <a href="https://www.facebook.com/piotrniepsujimages">ON FACEBOOK</a>.
+IF YOU WANT TO ASK ME ANYTHING PLEASE WRITE ME <a href="mailto:piotr.niepsuj@gmail.com">AN E-MAIL</a>.
+
+						</div>
+
+				</div>
+
+	</body>
+</html>
