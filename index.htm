@@ -59,9 +59,7 @@
 
 				.text {
 					position: absolute;
-					/*font-size:1.1rem;*/
 					z-index: 2;
-					/*top:6rem;*/
 					left:1rem;
 					right:1rem;
 					top:43%;
@@ -73,7 +71,6 @@
 					word-wrap: break-word;       /* Internet Explorer 5.5+ */
 					line-height: 1.4rem;
 	    			font-weight: 600;
-	    			letter-spacing: 0.07rem;
 	    			font-size:1.1rem;
 	    			transition: all 0.3s linear;
 	    			font-size: 4vh;
@@ -96,28 +93,23 @@
 
 				@media all and (min-width: 760px) {
 
-					html { 
-						/*font-size:50px;*/
-					}
-
-					body {
-						/*font-size:5%;*/
-					}
-
 					.image img {
-						max-width:350px;
+						height:75%;
+						width:auto;
+					}
+
+					.text {
+						top: inherit;
+						bottom:0rem;
 					}
 				}
 				
+				/*
 				@media all and (min-width: 760px) {
 
 					html { 
 						font-size:50px;
 					}
-
-					/*body {
-						font-size:5%;
-					}*/
 
 					.image img {
 						max-width:350px;
@@ -130,11 +122,10 @@
 		    			line-height: 5.5vh;
 		    			left:8vh;
 						right:8vh;
-
-						
 					}
 				
 				}
+				*/
 		</style>
 
 	</head>
