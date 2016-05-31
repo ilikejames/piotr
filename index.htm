@@ -7,101 +7,117 @@
 
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-		<meta property="og:title" content="Title Here" />
+		<meta property="og:title" content="PIOTR NIEPSUJ" />
 		<meta property="og:type" content="article" />
-		<meta property="og:url" content="http://www.example.com/" />
-		<meta property="og:image" content="http://example.com/image.jpg" />
+		<meta property="og:image" content="https://dl.dropboxusercontent.com/u/91409/piotr/sneeze.jpg" />
+
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:site" content="@piotrniepsuj">
+		<meta name="twitter:title" content="PIOTR NIEPSUJ">
+		<meta name="twitter:description" content="IMAGE BUSINESS, MILAN">
+		<meta name="twitter:image" content="https://dl.dropboxusercontent.com/u/91409/piotr/sneeze.jpg">
 
 		<style type="text/css">
-			/* mobile first */
-				* {
-					box-sizing:border-box;
-				}
+		
+			* {
+				box-sizing:border-box;
+			}
 
-				html, body {
-					height:100%;
-					min-height: 100%;
-					font-size:17px;
-					border:0;
-					margin:0;
-					padding:0;
-					font-family: Arial, sans-serif;
-				}
+			html, body {
+				height:100%;
+				min-height: 100%;
+				font-size:17px;
+				border:0;
+				margin:0;
+				padding:0;
+				font-family: Arial, sans-serif;
+			}
 
+			.image {
+				position: fixed;
+				top: 0rem;
+				bottom: 0rem;
+				left: 0rem;
+				right: 0rem;
+				background: white;
+				overflow: hidden;
+			}
+
+			.debug .image {
+				background: rgba(255,0,0,0.1);
+			}	
+
+			.image img {
+				height:75%;
+				transition: all 0.3s linear;
+			}
+
+			.image .overlay {
+				position: absolute;
+				top:0;
+				left: 0;
+				right:0;
+				bottom: 0;
+				background: rgba(255,255,255,0.2);
+			}
+
+			.text {
+				position: absolute;
+				z-index: 2;
+				left:1rem;
+				right:1rem;
+				top:43%;
+				overflow: auto;
+				white-space: pre-wrap;       /* css-3 */
+				white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
+				white-space: -pre-wrap;      /* Opera 4-6 */
+				white-space: -o-pre-wrap;    /* Opera 7 */
+				word-wrap: break-word;       /* Internet Explorer 5.5+ */
+				line-height: 1.4rem;
+    			font-weight: 600;
+    			font-size:1.1rem;
+    			font-size: 4vh;
+    			line-height: 4.5vh;
+    			left:1vh;
+				right:1vh;
+				bottom:0vh;
+				overflow: visible;
+			}
+
+			.text a {
+				color:black;
+			}
+
+			/* small screen where the image won't fill the width */
+			@media only screen and (max-width: 760px) and (orientation: portrait) {
 				.image {
-					position: fixed;
-					top: 0rem;
-					bottom: 0rem;
-					left: 0rem;
-					right: 0rem;
-					background: white;
-					overflow: hidden;
+					bottom:25%;
 				}
+				.image img {
+					width:100%;
+					height:inherit;
+				}
+			}
 
-				.debug .image {
-					background: rgba(255,0,0,0.1);
-				}	
+			@media only screen and (max-width: 760px) and (orientation: landscape) {
+				.image img {
+					max-width: 300px;
+				}
+			}
+
+			@media all and (min-width: 760px) {
 
 				.image img {
 					height:75%;
-					transition: all 0.3s linear;
-				}
-
-				.image .overlay {
-					position: absolute;
-					top:0;
-					left: 0;
-					right:0;
-					bottom: 0;
-					background: rgba(255,255,255,0.2);
+					width:auto;
 				}
 
 				.text {
-					position: absolute;
-					z-index: 2;
-					left:1rem;
-					right:1rem;
-					top:43%;
-					overflow: auto;
-					white-space: pre-wrap;       /* css-3 */
-					white-space: -moz-pre-wrap;  /* Mozilla, since 1999 */
-					white-space: -pre-wrap;      /* Opera 4-6 */
-					white-space: -o-pre-wrap;    /* Opera 7 */
-					word-wrap: break-word;       /* Internet Explorer 5.5+ */
-					line-height: 1.4rem;
-	    			font-weight: 600;
-	    			font-size:1.1rem;
-	    			font-size: 4vh;
-	    			line-height: 4.5vh;
-	    			left:1vh;
-					right:1vh;
-					bottom:0vh;
-					overflow: visible;
+					top: inherit;
+					bottom:1rem;
+	    			transition: all 0.3s linear;
 				}
-
-				.text a {
-					color:black;
-				}
-
-				@media only screen and (max-width: 760px) and (orientation: landscape) {
-					.image img {
-						max-width: 300px;
-					}
-				}
-
-				@media all and (min-width: 760px) {
-
-					.image img {
-						height:75%;
-						width:auto;
-					}
-
-					.text {
-						top: inherit;
-						bottom:1rem;
-		    			transition: all 0.3s linear;
-					}
-				}
+			}
 
 		</style>
 
