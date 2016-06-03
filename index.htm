@@ -52,15 +52,7 @@
 				transition: all 0.3s linear;
 			}
 
-			.image .overlay {
-				position: absolute;
-				top:0;
-				left: 0;
-				right:0;
-				bottom: 0;
-				background: rgba(255,255,255,0.2);
-			}
-
+			
 			.text {
 				position: absolute;
 				z-index: 2;
@@ -88,7 +80,38 @@
 				color:black;
 			}
 
+			
+
+			.textblock {
+				position: absolute;
+				bottom:0;
+				left:0;
+				right:0;
+				height:40%;
+				background: rgba(255,0,0,0.2);
+				opacity: 0.1;
+				text-align: right;
+				display: none;
+			}
+
+			.text {
+				/* debugger*/
+				bottom: 2rem;
+			    opacity: 1;
+			}
 			/* small screen where the image won't fill the width */
+
+			@media only screen and (min-width: 760px) {
+				.text {
+					/* debugger*/
+					left: 3rem;
+					font-size: 5vh;
+				    line-height: 5vh;
+				    letter-spacing: 2px;
+				}
+			}
+
+
 			@media only screen and (max-width: 760px) and (orientation: portrait) {
 				.image {
 					bottom:25%;
@@ -127,20 +150,69 @@
 				<div id="piotr">
 						<div class="image restrict">
 							<img src="sneeze.jpg"/>
-							<div class="overlay"></div>
 						</div>
 
 
-						<div class="text restrict">
+						<div class="text restrict old">
 PIOTR NIEPSUJ
 IMAGE BUSINESS, MILAN
 
 SOME OF MY PHOTOS ARE <a href="http://piotrniepsuj.tumblr.com">ON TUMBLR</a>, SOME MORE ARE <a href="https://www.instagram.com/piotrniepsuj/">ON INSTAGRAM</a>, AND THERE IS EVEN MORE <a href="https://www.facebook.com/piotrniepsujimages">ON FACEBOOK</a>.
-IF YOU WANT TO ASK ME ANYTHING PLEASE WRITE ME <a href="mailto:piotr.niepsuj@gmail.com">AN E-MAIL</a>.
+IF YOU WANT TO ASK ME ANYTHING PLEASE WRITE ME <a href="mailto:piotr.niepsuj@gmail.com">AN E-MAIL</a>.</div>
+
+						<div class="textblock restrict new">
+
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
+							<h1>something</h1>
 
 						</div>
-
 				</div>
+
+				<script>
+					function hasScroll(el) {
+						var a = parseFloat(window.getComputedStyle(el).getPropertyValue('height'),10);
+						var b = el.scrollHeight-10;
+						return b-a < 2 && b-a > -2 ? 1 : a/b;
+					}
+
+					function onLoad() {
+		
+						var el = document.querySelector('.textblock');
+						var computed = window.getComputedStyle(el);
+						var percent = hasScroll(el);
+						var font = window.getComputedStyle(el).getPropertyValue('font-size');
+						var line = window.getComputedStyle(el).getPropertyValue('line-height');
+
+						
+						var fontsize = parseFloat(font,10) * percent	 + 'px';
+						
+						console.log('font', font, fontsize, line);
+
+						el.style.fontSize=fontsize;
+						//el.style.lineHeight = fontsize;
+					}
+
+					function debounce(fn, delay) {
+					  var timer = null;
+					  return function () {
+					    var context = this, args = arguments;
+					    clearTimeout(timer);
+					    timer = setTimeout(function () {
+					      fn.apply(context, args);
+					    }, delay);
+					  };
+					}
+
+					//document.addEventListener('DOMContentLoaded', onLoad);
+					//window.onresize=debounce(onLoad,50);
+
+				</script>
 
 	</body>
 </html>
